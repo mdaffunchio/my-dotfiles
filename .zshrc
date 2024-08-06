@@ -17,7 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -83,9 +83,11 @@ plugins=(git
 zsh-syntax-highlighting
 zsh-completions
 zsh-autosuggestions
+kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
+#source <(kubectl completion zsh)
 
 # User configuration
 
@@ -111,4 +113,15 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="vim  ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+#alias k="kubectl"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+PROMPT='$(kube_ps1)'$PROMPT
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
