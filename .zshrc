@@ -83,7 +83,6 @@ plugins=(git
 zsh-syntax-highlighting
 zsh-completions
 zsh-autosuggestions
-kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,10 +117,10 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-PROMPT='$(kube_ps1)'$PROMPT
+#PROMPT='$(kube_ps1)'$PROMPT
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
