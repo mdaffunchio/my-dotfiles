@@ -1,9 +1,9 @@
 !/bin/bash
 
-cat bashrc.additions >> ~/.bashrc
+#cat bashrc.additions >> ~/.bashrc
 
-cp ./.gitmessage ~
-cp ./.gitconfig ~
+#cp ./.gitmessage ~
+#cp ./.gitconfig ~
 
 # powerline fonts for zsh agnoster theme
 git clone https://github.com/powerline/fonts.git
