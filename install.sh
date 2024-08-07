@@ -23,4 +23,4 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.
 
 cp ./.zshrc ~
 
-source ~/.zshrc
+zsh -c 'source ~/.zshrc'
