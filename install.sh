@@ -22,3 +22,5 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.
 #git clone --depth 1 https://github.com/romkatv/powerlevel10k "$HOME"/.oh-my-zsh/custom/themes/powerlevel10k
 
 cp ./.zshrc ~
+
+source ~/.zshrc
