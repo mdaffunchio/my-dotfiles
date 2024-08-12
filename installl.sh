@@ -31,9 +31,10 @@ if [ "$version_actual" > "$version_deseada" ]; then
     git clone --depth 1 https://github.com/romkatv/powerlevel10k "$HOME"/.oh-my-zsh/custom/themes/powerlevel10k
   fi
     
-  cp ./.pk10k.zsh ~
+  cp ./.p10k.zsh ~
   # update theme
   sed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
+  
 else
   echo "La versión de zsh es diferente."
 fi
