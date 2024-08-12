@@ -20,8 +20,6 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.
 
 cp ./.zshrc ~
 
-sudo apt install bc
-
 # Version de ZSH
 version_actual=$(zsh --version | cut -d' ' -f2)
 version_deseada="5.7.0"
