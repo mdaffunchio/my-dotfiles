@@ -20,16 +20,18 @@ zsh -c 'git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.
 
 cp ./.zshrc ~
 
+sudo apt install bc
+
 # Version de ZSH
 version_actual=$(zsh --version | cut -d' ' -f2)
 version_deseada="5.7.0"
-if [[ "$version_actual" == "$version_deseada" ]]; then
+if [ "$version_actual" > "$version_deseada" ]; then
   echo "La versión de zsh es la correcta."
   # powerlevel10k Requiere version 5.7
   git clone --depth 1 https://github.com/romkatv/powerlevel10k "$HOME"/.oh-my-zsh/custom/themes/powerlevel10k
   cp ./.pk10k.zsh ~
   # update theme
-  sed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc 
+  sed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
 else
   echo "La versión de zsh es diferente."
 fi
