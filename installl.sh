@@ -34,5 +34,4 @@ else
   echo "La versión de zsh es diferente."
 fi
 
-
 zsh -c 'source ~/.zshrc'
